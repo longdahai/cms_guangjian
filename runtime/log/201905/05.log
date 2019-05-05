@@ -1,0 +1,805 @@
+---------------------------------------------------------------
+[ 2019-05-05T22:31:01+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/index/login
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005400s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin` [ RunTime:0.031630s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.001421s ]
+[ sql ] [ SQL ] UPDATE `gj_admin`  SET `logintime`=1557066661,`token`='cffd20c0-f9a0-4ee8-b343-626815d1bdd1',`updatetime`=1557066661  WHERE  `id` = 1 [ RunTime:0.032100s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.020518s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"__token__\":\"98d9bf40b845ddd0aabaed695e8ab225\",\"username\":\"admin\",\"captcha\":\"pa2u\",\"keeplogin\":\"1\"}' , '/index.php/admin/index/login' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066661) [ RunTime:0.059781s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:31:01+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006796s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.026898s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001270s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.028366s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002270s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.001767s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:31:02+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/index.php/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006411s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.024452s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001276s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.034942s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002107s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gj_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.001164s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:31:21+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006297s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.028037s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001918s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.027178s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001682s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.023973s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"summernote\",\"faversion\":\"1.0.0.20190418_beta\"}' , '/index.php/admin/addon/install' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066681) [ RunTime:0.045783s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:31:25+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.169973s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023907s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001039s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.026883s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001781s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat' , '微信管理' , 'fa fa-wechat' , 1 , 0 , 'normal' , 1557066683 , 1557066683) [ RunTime:0.051425s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/autoreply' , '自动回复管理' , 'fa fa-reply-all' , 1 , 85 , 'normal' , 1557066683 , 1557066683) [ RunTime:0.022777s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/autoreply/index' , '查看' , 0 , 'fa fa-circle-o' , 86 , 'normal' , 1557066683 , 1557066683) [ RunTime:0.030021s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/autoreply/add' , '添加' , 0 , 'fa fa-circle-o' , 86 , 'normal' , 1557066683 , 1557066683) [ RunTime:0.053262s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/autoreply/edit' , '修改' , 0 , 'fa fa-circle-o' , 86 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.056505s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/autoreply/del' , '删除' , 0 , 'fa fa-circle-o' , 86 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.023740s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/autoreply/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 86 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.030034s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/config' , '配置管理' , 'fa fa-cog' , 1 , 85 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.023872s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/config/index' , '查看' , 0 , 'fa fa-circle-o' , 92 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.029951s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/config/add' , '添加' , 0 , 'fa fa-circle-o' , 92 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.024019s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/config/edit' , '修改' , 0 , 'fa fa-circle-o' , 92 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.052643s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/config/del' , '删除' , 0 , 'fa fa-circle-o' , 92 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.045947s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/config/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 92 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.030079s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/menu' , '菜单管理' , 'fa fa-list' , 1 , 85 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.023667s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/menu/index' , '查看' , 0 , 'fa fa-circle-o' , 98 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.030135s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/menu/add' , '添加' , 0 , 'fa fa-circle-o' , 98 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.024357s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/menu/edit' , '修改' , 0 , 'fa fa-circle-o' , 98 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.040586s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/menu/del' , '删除' , 0 , 'fa fa-circle-o' , 98 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.025754s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/menu/sync' , '同步' , 0 , 'fa fa-circle-o' , 98 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.039428s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/menu/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 98 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.024037s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/response' , '资源管理' , 'fa fa-list-alt' , 1 , 85 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.029442s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/response/index' , '查看' , 0 , 'fa fa-circle-o' , 105 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.023779s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/response/add' , '添加' , 0 , 'fa fa-circle-o' , 105 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.030028s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/response/edit' , '修改' , 0 , 'fa fa-circle-o' , 105 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.023705s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/response/del' , '删除' , 0 , 'fa fa-circle-o' , 105 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.030294s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/response/select' , '选择' , 0 , 'fa fa-circle-o' , 105 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.024154s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('wechat/response/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 105 , 'normal' , 1557066684 , 1557066684) [ RunTime:0.029239s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.025382s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"wechat\",\"faversion\":\"1.0.0.20190418_beta\"}' , '/index.php/admin/addon/install' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066685) [ RunTime:0.029397s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:31:27+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.177366s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.024120s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001223s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.028769s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002144s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_auth_rule` WHERE  `name` = 'general' LIMIT 1 [ RunTime:0.001175s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `remark` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('general/database' , '数据库管理' , 'fa fa-database' , '可在线进行一些简单的数据库表优化或修复,查看表结构和数据。也可以进行SQL语句的操作' , 1 , 2 , 'normal' , 1557066686 , 1557066686) [ RunTime:0.038910s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('general/database/index' , '查看' , 0 , 'fa fa-circle-o' , 112 , 'normal' , 1557066686 , 1557066686) [ RunTime:0.052991s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('general/database/query' , '查询' , 0 , 'fa fa-circle-o' , 112 , 'normal' , 1557066686 , 1557066686) [ RunTime:0.034189s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('general/database/backup' , '备份' , 0 , 'fa fa-circle-o' , 112 , 'normal' , 1557066686 , 1557066686) [ RunTime:0.055232s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('general/database/restore' , '恢复' , 0 , 'fa fa-circle-o' , 112 , 'normal' , 1557066687 , 1557066687) [ RunTime:0.032185s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.021099s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"database\",\"faversion\":\"1.0.0.20190418_beta\"}' , '/index.php/admin/addon/install' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066687) [ RunTime:0.043792s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:31:31+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.157472s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.024693s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000992s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.027759s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001933s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example' , '开发示例管理' , 'fa fa-magic' , 1 , 0 , 'normal' , 1557066689 , 1557066689) [ RunTime:0.048061s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/bootstraptable' , '表格完整示例' , 'fa fa-table' , 1 , 117 , 'normal' , 1557066689 , 1557066689) [ RunTime:0.031875s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/bootstraptable/index' , '查看' , 0 , 'fa fa-circle-o' , 118 , 'normal' , 1557066689 , 1557066689) [ RunTime:0.032931s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/bootstraptable/detail' , '详情' , 0 , 'fa fa-circle-o' , 118 , 'normal' , 1557066689 , 1557066689) [ RunTime:0.032040s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/bootstraptable/change' , '变更' , 0 , 'fa fa-circle-o' , 118 , 'normal' , 1557066689 , 1557066689) [ RunTime:0.053022s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/bootstraptable/del' , '删除' , 0 , 'fa fa-circle-o' , 118 , 'normal' , 1557066689 , 1557066689) [ RunTime:0.034555s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/bootstraptable/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 118 , 'normal' , 1557066689 , 1557066689) [ RunTime:0.033351s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/customsearch' , '自定义搜索' , 'fa fa-table' , 1 , 117 , 'normal' , 1557066689 , 1557066689) [ RunTime:0.031718s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/customsearch/index' , '查看' , 0 , 'fa fa-circle-o' , 124 , 'normal' , 1557066689 , 1557066689) [ RunTime:0.055328s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/customsearch/del' , '删除' , 0 , 'fa fa-circle-o' , 124 , 'normal' , 1557066689 , 1557066689) [ RunTime:0.032251s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/customsearch/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 124 , 'normal' , 1557066689 , 1557066689) [ RunTime:0.032998s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/colorbadge' , '彩色角标' , 'fa fa-table' , 1 , 117 , 'normal' , 1557066689 , 1557066689) [ RunTime:0.031951s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/colorbadge/index' , '查看' , 0 , 'fa fa-circle-o' , 128 , 'normal' , 1557066689 , 1557066689) [ RunTime:0.032934s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/colorbadge/del' , '删除' , 0 , 'fa fa-circle-o' , 128 , 'normal' , 1557066689 , 1557066689) [ RunTime:0.032030s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/colorbadge/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 128 , 'normal' , 1557066689 , 1557066689) [ RunTime:0.055672s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/controllerjump' , '控制器间跳转' , 'fa fa-table' , 1 , 117 , 'normal' , 1557066689 , 1557066689) [ RunTime:0.031825s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/controllerjump/index' , '查看' , 0 , 'fa fa-circle-o' , 132 , 'normal' , 1557066689 , 1557066689) [ RunTime:0.033182s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/controllerjump/del' , '删除' , 0 , 'fa fa-circle-o' , 132 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.032157s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/controllerjump/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 132 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.032738s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/cxselect' , '多级联动' , 'fa fa-table' , 1 , 117 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.032127s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/cxselect/index' , '查看' , 0 , 'fa fa-circle-o' , 136 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.033019s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/cxselect/del' , '删除' , 0 , 'fa fa-circle-o' , 136 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.032155s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/cxselect/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 136 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.032885s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/multitable' , '多表格示例' , 'fa fa-table' , 1 , 117 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.032058s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/multitable/index' , '查看' , 0 , 'fa fa-circle-o' , 140 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.032985s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/multitable/del' , '删除' , 0 , 'fa fa-circle-o' , 140 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.032112s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/multitable/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 140 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.033010s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/relationmodel' , '关联模型示例' , 'fa fa-table' , 1 , 117 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.043353s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/relationmodel/index' , '查看' , 0 , 'fa fa-circle-o' , 144 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.032691s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/relationmodel/del' , '删除' , 0 , 'fa fa-circle-o' , 144 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.032452s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/relationmodel/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 144 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.032581s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/tabletemplate' , '表格模板示例' , 'fa fa-table' , 1 , 117 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.031462s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/tabletemplate/index' , '查看' , 0 , 'fa fa-circle-o' , 148 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.032664s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/tabletemplate/detail' , '详情' , 0 , 'fa fa-circle-o' , 148 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.031905s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/tabletemplate/del' , '删除' , 0 , 'fa fa-circle-o' , 148 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.075922s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/tabletemplate/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 148 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.163724s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/baidumap' , '百度地图示例' , 'fa fa-map-pin' , 1 , 117 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.034551s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/baidumap/index' , '查看' , 0 , 'fa fa-circle-o' , 153 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.053961s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/baidumap/map' , '详情' , 0 , 'fa fa-circle-o' , 153 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.033086s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('example/baidumap/del' , '删除' , 0 , 'fa fa-circle-o' , 153 , 'normal' , 1557066690 , 1557066690) [ RunTime:0.032046s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.019741s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"example\",\"faversion\":\"1.0.0.20190418_beta\"}' , '/index.php/admin/addon/install' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066691) [ RunTime:0.028394s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:31:33+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.136901s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023505s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001468s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.026231s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002506s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command' , '在线命令管理' , 'fa fa-terminal' , 1 , 0 , 'normal' , 1557066693 , 1557066693) [ RunTime:0.039076s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command/index' , '查看' , 0 , 'fa fa-circle-o' , 157 , 'normal' , 1557066693 , 1557066693) [ RunTime:0.021681s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command/add' , '添加' , 0 , 'fa fa-circle-o' , 157 , 'normal' , 1557066693 , 1557066693) [ RunTime:0.021976s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command/detail' , '详情' , 0 , 'fa fa-circle-o' , 157 , 'normal' , 1557066693 , 1557066693) [ RunTime:0.021025s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command/execute' , '运行' , 0 , 'fa fa-circle-o' , 157 , 'normal' , 1557066693 , 1557066693) [ RunTime:0.021887s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command/del' , '删除' , 0 , 'fa fa-circle-o' , 157 , 'normal' , 1557066693 , 1557066693) [ RunTime:0.043135s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 157 , 'normal' , 1557066693 , 1557066693) [ RunTime:0.021859s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.023477s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"command\",\"faversion\":\"1.0.0.20190418_beta\"}' , '/index.php/admin/addon/install' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066693) [ RunTime:0.027134s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:31:33+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006188s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.022490s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001282s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.026314s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003688s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.002239s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.025257s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/index.php/admin/index/index' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066693) [ RunTime:0.043400s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:31:34+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020773s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.025323s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001181s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.028238s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002915s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.026120s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/index.php/admin/index/index' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066694) [ RunTime:0.038506s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:31:34+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016120s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.025233s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001125s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.026228s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002755s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.026011s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/index.php/admin/index/index' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066694) [ RunTime:0.032256s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:31:35+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022532s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.022114s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001662s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.030109s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003329s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.026351s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/index.php/admin/index/index' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066695) [ RunTime:0.039110s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:31:35+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027696s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.027330s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001299s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.025698s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002910s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.023051s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/index.php/admin/index/index' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066695) [ RunTime:0.039342s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:31:57+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/index.php/admin/addon?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006164s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.022963s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001371s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.025690s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002575s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gj_auth_rule` WHERE  `name` = 'addon' LIMIT 1 [ RunTime:0.001170s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:32:10+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/index.php/admin/addon?ref=addtabs
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006550s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.026175s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001205s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.026619s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002931s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:32:11+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006875s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.025595s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001164s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.027080s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002881s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:32:11+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/index.php/admin/addon?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006448s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.026579s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001170s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.024569s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002493s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gj_auth_rule` WHERE  `name` = 'addon' LIMIT 1 [ RunTime:0.001254s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:32:11+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/index.php/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005650s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.022876s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001029s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.024382s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002970s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gj_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.001097s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:32:24+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006662s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.024647s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001119s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.025216s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002339s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.021225s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"epay\",\"force\":\"0\",\"uid\":\"0\",\"token\":\"\",\"version\":\"1.0.4\",\"faversion\":\"1.0.0.20190418_beta\"}' , '/index.php/admin/addon/install' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066744) [ RunTime:0.056604s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:32:25+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010287s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023807s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001458s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.027740s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002978s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.021986s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/index.php/admin/index/index' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066744) [ RunTime:0.066055s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:32:40+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005902s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.024774s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001109s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.025130s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002967s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.023994s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"geetest\",\"force\":\"0\",\"uid\":\"0\",\"token\":\"\",\"version\":\"1.0.0\",\"faversion\":\"1.0.0.20190418_beta\"}' , '/index.php/admin/addon/install' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066760) [ RunTime:0.035222s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:32:41+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011273s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.032417s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001109s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.028579s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002970s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.023298s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/index.php/admin/index/index' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066761) [ RunTime:0.028293s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:32:45+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006547s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.024549s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001188s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.025227s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002655s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.023145s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"editable\",\"force\":\"0\",\"uid\":\"0\",\"token\":\"\",\"version\":\"1.0.0\",\"faversion\":\"1.0.0.20190418_beta\"}' , '/index.php/admin/addon/install' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066765) [ RunTime:0.033950s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:32:46+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006362s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.028489s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001108s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.026930s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002712s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.023554s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/index.php/admin/index/index' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066766) [ RunTime:0.035874s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:32:48+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005229s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.024225s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001364s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.024574s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002021s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.019789s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"loginbg\",\"force\":\"0\",\"uid\":\"0\",\"token\":\"\",\"version\":\"1.0.1\",\"faversion\":\"1.0.0.20190418_beta\"}' , '/index.php/admin/addon/install' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066768) [ RunTime:0.036629s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:32:49+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013993s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.029142s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002483s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.023747s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001736s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.022597s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/index.php/admin/index/index' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066769) [ RunTime:0.044302s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:33:01+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/index.php/admin/addon?ref=addtabs
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006652s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023916s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001327s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.027720s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002716s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:33:01+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005918s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.022718s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001066s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.021869s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002584s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:33:02+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/index.php/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006242s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023690s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001114s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.026260s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002698s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gj_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.001096s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:33:02+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/index.php/admin/addon?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006372s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.025733s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001273s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.027930s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002426s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gj_auth_rule` WHERE  `name` = 'addon' LIMIT 1 [ RunTime:0.001319s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:33:37+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007226s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.024686s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001052s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.025502s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002882s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('general/logs' , '日志管理' , 1 , 'fa fa-pied-piper-alt' , 2 , 'normal' , 1557066816 , 1557066816) [ RunTime:0.059452s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('general/logs/index' , '查看' , 0 , 'fa fa-circle-o' , 164 , 'normal' , 1557066816 , 1557066816) [ RunTime:0.024804s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('general/logs/del' , '删除' , 0 , 'fa fa-circle-o' , 164 , 'normal' , 1557066816 , 1557066816) [ RunTime:0.049995s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('general/logs/detail' , '详情' , 0 , 'fa fa-circle-o' , 164 , 'normal' , 1557066816 , 1557066816) [ RunTime:0.026096s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.021896s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"log\",\"force\":\"0\",\"uid\":\"0\",\"token\":\"\",\"version\":\"1.0.2\",\"faversion\":\"1.0.0.20190418_beta\"}' , '/index.php/admin/addon/install' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066817) [ RunTime:0.032285s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:33:37+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006162s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.029835s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001120s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.029378s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002625s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.002250s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.023959s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/index.php/admin/index/index' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066817) [ RunTime:0.025831s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:33:43+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007564s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023064s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001326s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.024720s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002680s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.019615s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"togglesidebar\",\"force\":\"0\",\"uid\":\"0\",\"token\":\"\",\"version\":\"1.0.0\",\"faversion\":\"1.0.0.20190418_beta\"}' , '/index.php/admin/addon/install' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066823) [ RunTime:0.030432s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:33:43+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006687s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.026725s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002327s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.027919s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002824s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.023815s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/index.php/admin/index/index' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066823) [ RunTime:0.026071s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:34:34+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/addon/local
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009490s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.025555s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001482s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.024580s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003335s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms' , 'CMS管理' , 1 , 'fa fa-list' , 0 , 'normal' , 1557066870 , 1557066870) [ RunTime:0.075036s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/archives' , '内容管理' , 'fa fa-file-text-o' , 1 , 168 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.034155s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/archives/index' , '查看' , 0 , 'fa fa-circle-o' , 169 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.029987s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `remark` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/archives/content' , '副表管理' , '用于管理模型副表的数据列表,不建议在此进行删除操作' , 0 , 'fa fa-circle-o' , 169 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.023944s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/archives/add' , '添加' , 0 , 'fa fa-circle-o' , 169 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.029908s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/archives/edit' , '修改' , 0 , 'fa fa-circle-o' , 169 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.024013s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/archives/del' , '删除' , 0 , 'fa fa-circle-o' , 169 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.030256s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/archives/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 169 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.023926s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `remark` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/channel' , '栏目管理' , 'fa fa-list' , '用于管理网站的分类，可进行无限级分类，注意只有类型为列表的才可以添加文章' , 1 , 168 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.029919s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/channel/index' , '查看' , 0 , 'fa fa-circle-o' , 176 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.024028s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/channel/add' , '添加' , 0 , 'fa fa-circle-o' , 176 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.031043s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/channel/edit' , '修改' , 0 , 'fa fa-circle-o' , 176 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.033302s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/channel/del' , '删除' , 0 , 'fa fa-circle-o' , 176 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.030045s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/channel/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 176 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.023602s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/channel/admin' , '栏目授权' , 0 , 'fa fa-circle-o' , 176 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.029819s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `remark` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/modelx' , '模型管理' , 'fa fa-th' , '在线添加修改删除模型，管理模型字段和相关模型数据' , 1 , 168 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.023710s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/modelx/index' , '查看' , 0 , 'fa fa-circle-o' , 183 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.030249s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/modelx/add' , '添加' , 0 , 'fa fa-circle-o' , 183 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.023713s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/modelx/edit' , '修改' , 0 , 'fa fa-circle-o' , 183 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.030148s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/modelx/del' , '删除' , 0 , 'fa fa-circle-o' , 183 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.024020s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/modelx/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 183 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.030370s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `ismenu` , `remark` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/fields' , '字段管理' , 'fa fa-fields' , 0 , '用于管理模型或表单的字段，进行相关的增删改操作，灰色为主表字段无法修改' , 183 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.023588s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/fields/index' , '查看' , 0 , 'fa fa-circle-o' , 189 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.030182s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/fields/add' , '添加' , 0 , 'fa fa-circle-o' , 189 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.023664s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/fields/edit' , '修改' , 0 , 'fa fa-circle-o' , 189 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.029767s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/fields/del' , '删除' , 0 , 'fa fa-circle-o' , 189 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.024044s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/fields/duplicate' , '复制' , 0 , 'fa fa-circle-o' , 189 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.029720s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/fields/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 189 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.023865s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `remark` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/tags' , '标签管理' , 'fa fa-tags' , '用于管理文章关联的标签,标签的添加在添加文章时自动维护,无需手动添加标签' , 1 , 168 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.030106s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/tags/index' , '查看' , 0 , 'fa fa-circle-o' , 196 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.023933s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/tags/add' , '添加' , 0 , 'fa fa-circle-o' , 196 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.030112s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/tags/edit' , '修改' , 0 , 'fa fa-circle-o' , 196 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.023926s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/tags/del' , '删除' , 0 , 'fa fa-circle-o' , 196 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.030378s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/tags/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 196 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.023713s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `remark` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/block' , '区块管理' , 'fa fa-th-large' , '用于管理站点的自定义区块内容,常用于广告、JS脚本、焦点图、片段代码等' , 1 , 168 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.030394s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/block/index' , '查看' , 0 , 'fa fa-circle-o' , 202 , 'normal' , 1557066871 , 1557066871) [ RunTime:0.023573s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/block/add' , '添加' , 0 , 'fa fa-circle-o' , 202 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.030171s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/block/edit' , '修改' , 0 , 'fa fa-circle-o' , 202 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.023954s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/block/del' , '删除' , 0 , 'fa fa-circle-o' , 202 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.032066s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/block/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 202 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.042150s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `remark` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/page' , '单页管理' , 'fa fa-file' , '用于管理网站的单页面，可任意创建修改删除单页面' , 1 , 168 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.020715s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/page/index' , '查看' , 0 , 'fa fa-circle-o' , 208 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021891s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/page/add' , '添加' , 0 , 'fa fa-circle-o' , 208 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021101s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/page/edit' , '修改' , 0 , 'fa fa-circle-o' , 208 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021875s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/page/del' , '删除' , 0 , 'fa fa-circle-o' , 208 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021135s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/page/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 208 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021941s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `remark` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/comment' , '评论管理' , 'fa fa-comment' , '用于管理用户在网站上发表的评论，可任意修改或隐藏评论' , 1 , 168 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021041s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/comment/index' , '查看' , 0 , 'fa fa-circle-o' , 214 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021955s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/comment/add' , '添加' , 0 , 'fa fa-circle-o' , 214 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021031s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/comment/edit' , '修改' , 0 , 'fa fa-circle-o' , 214 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.022012s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/comment/del' , '删除' , 0 , 'fa fa-circle-o' , 214 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021046s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/comment/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 214 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.022011s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `remark` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diyform' , '自定义表单管理' , 'fa fa-list' , '可在线创建自定义表单，管理表单字段和数据列表' , 1 , 168 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021099s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diyform/index' , '查看' , 0 , 'fa fa-circle-o' , 220 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021842s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diyform/add' , '添加' , 0 , 'fa fa-circle-o' , 220 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021016s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diyform/edit' , '修改' , 0 , 'fa fa-circle-o' , 220 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021969s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diyform/del' , '删除' , 0 , 'fa fa-circle-o' , 220 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021007s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diyform/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 220 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021963s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `ismenu` , `remark` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diydata' , '自定义表单数据管理' , 'fa fa-list' , 0 , '可在线管理自定义表单的数据列表' , 168 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021042s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diydata/index' , '查看' , 0 , 'fa fa-circle-o' , 226 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021855s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diydata/add' , '添加' , 0 , 'fa fa-circle-o' , 226 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.020983s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diydata/edit' , '修改' , 0 , 'fa fa-circle-o' , 226 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021945s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diydata/del' , '删除' , 0 , 'fa fa-circle-o' , 226 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.020884s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diydata/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 226 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021989s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diydata/import' , '导入' , 0 , 'fa fa-circle-o' , 226 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.020993s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `icon` , `ismenu` , `remark` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/order' , '订单管理' , 'fa fa-cny' , 1 , '可在线管理付费查看所产生的订单' , 168 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.022003s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/order/index' , '查看' , 0 , 'fa fa-circle-o' , 233 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.020966s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/order/add' , '添加' , 0 , 'fa fa-circle-o' , 233 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021999s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/order/edit' , '修改' , 0 , 'fa fa-circle-o' , 233 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021057s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/order/del' , '删除' , 0 , 'fa fa-circle-o' , 233 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021865s ]
+[ sql ] [ SQL ] INSERT INTO `gj_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/order/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 233 , 'normal' , 1557066872 , 1557066872) [ RunTime:0.021199s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.025792s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 本地安装' , '{\"name\":\"1.1.3.zip\"}' , '/index.php/admin/addon/local' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066874) [ RunTime:0.000875s ]
+[ error ] [2]unlink(E:\phpstudy\PHPTutorial\WWW\cms_guangjian\runtime\addons\5ccef474c4b06.zip): Permission denied
+---------------------------------------------------------------
+[ 2019-05-05T22:34:36+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/addon/state
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006912s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023080s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001148s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.023475s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003282s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_auth_rule` WHERE  `name` = 'cms' LIMIT 1 [ RunTime:0.001698s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name` FROM `gj_auth_rule` ORDER BY `weigh` DESC [ RunTime:0.001308s ]
+[ sql ] [ SQL ] UPDATE `gj_auth_rule`  SET `status`='normal'  WHERE  `id` IN (176,180,179,178,177,181,182,183,189,192,191,190,195,194,193,188,187,186,185,184,169,175,174,173,172,171,170,168,220,225,224,223,222,221,226,227,228,232,231,230,229,233,238,237,236,235,234,202,203,204,205,207,206,196,201,200,199,198,197,214,219,218,217,216,215,208,213,212,211,210,209) [ RunTime:0.073822s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.029574s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 禁用启用' , '{\"name\":\"cms\",\"action\":\"enable\",\"force\":\"0\"}' , '/index.php/admin/addon/state' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066876) [ RunTime:0.049742s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:34:37+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005447s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023103s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001231s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.022746s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003270s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.002666s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.023601s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/index.php/admin/index/index' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557066877) [ RunTime:0.054752s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:35:01+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/index.php/admin/addon?ref=addtabs
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006503s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.025324s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001101s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.025345s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.004544s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:35:02+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006344s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.024284s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001311s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.026559s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.004204s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:35:02+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/index.php/admin/addon?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011974s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.029231s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001165s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.023866s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003687s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gj_auth_rule` WHERE  `name` = 'addon' LIMIT 1 [ RunTime:0.001221s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:35:03+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/index.php/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005775s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.022458s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001226s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.023369s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003200s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gj_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.001029s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:35:35+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/index.php/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006799s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_user_token` [ RunTime:0.024189s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_user_token` WHERE  `token` = 'd8aa945b8448d8a41ab99c04b04f9e522294b47c' LIMIT 1 [ RunTime:0.001082s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:35:57+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/index.php/index/user/login.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006086s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_user` [ RunTime:0.021476s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_user` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.001804s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001030s ]
+[ sql ] [ SQL ] UPDATE `gj_user`  SET `prevtime`=1516171614,`logintime`=1557066957,`updatetime`=1557066957  WHERE  `id` = 1 [ RunTime:0.000934s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_user_token` [ RunTime:0.021226s ]
+[ sql ] [ SQL ] INSERT INTO `gj_user_token` (`token` , `user_id` , `createtime` , `expiretime`) VALUES ('9c24011c44c951c96cc324035516e1f43c924379' , 1 , 1557066957 , 1559658957) [ RunTime:0.000769s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:35:59+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/index.php/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006971s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_user_token` [ RunTime:0.022903s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_user_token` WHERE  `token` = '9c24011c44c951c96cc324035516e1f43c924379' LIMIT 1 [ RunTime:0.000912s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_user` [ RunTime:0.023484s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001185s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:36:00+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/index.php/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008792s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_user_token` [ RunTime:0.020432s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_user_token` WHERE  `token` = '9c24011c44c951c96cc324035516e1f43c924379' LIMIT 1 [ RunTime:0.000822s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_user` [ RunTime:0.024821s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001567s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:36:10+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005523s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_user_token` [ RunTime:0.024799s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_user_token` WHERE  `token` = '9c24011c44c951c96cc324035516e1f43c924379' LIMIT 1 [ RunTime:0.001159s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_user` [ RunTime:0.023149s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001326s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:36:35+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007408s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023666s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001190s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.025083s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003580s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:36:36+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005957s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.019730s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001200s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.021856s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003041s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gj_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:36:42+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/cms/archives?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011362s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.021259s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001138s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.021460s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003529s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_cms_channel` [ RunTime:0.024555s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_cms_channel` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001176s ]
+[ sql ] [ SQL ] SELECT `id` FROM `gj_cms_channel` [ RunTime:0.000768s ]
+[ sql ] [ SQL ] SELECT `parent_id` FROM `gj_cms_channel` WHERE  `id` IN ('') [ RunTime:0.000635s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_cms_model` [ RunTime:0.020440s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_cms_model` [ RunTime:0.000811s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gj_auth_rule` WHERE  `name` = 'cms/archives' LIMIT 1 [ RunTime:0.000925s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:36:44+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/cms/archives/index?sort=weigh+DESC%2Cid+DESC&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1557067002456
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006730s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023357s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001128s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.022376s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003836s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_cms_channel` [ RunTime:0.021079s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_cms_channel` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001006s ]
+[ sql ] [ SQL ] SELECT `id` FROM `gj_cms_channel` [ RunTime:0.000734s ]
+[ sql ] [ SQL ] SELECT `parent_id` FROM `gj_cms_channel` WHERE  `id` IN ('') [ RunTime:0.000720s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_cms_archives` [ RunTime:0.024658s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gj_cms_archives` `archives` LEFT JOIN `gj_cms_channel` `channel` ON `archives`.`channel_id`=`channel`.`id` WHERE `archives`.`deletetime` IS NULL ORDER BY `archives`.`weigh` DESC,`archives`.`id` DESC LIMIT 1 [ RunTime:0.001214s ]
+[ sql ] [ SQL ] SELECT `archives`.`id`,`archives`.`user_id`,`archives`.`channel_id`,`archives`.`model_id`,`archives`.`title`,`archives`.`style`,`archives`.`flag`,`archives`.`image`,`archives`.`keywords`,`archives`.`description`,`archives`.`tags`,`archives`.`weigh`,`archives`.`views`,`archives`.`comments`,`archives`.`likes`,`archives`.`dislikes`,`archives`.`diyname`,`archives`.`createtime`,`archives`.`updatetime`,`archives`.`publishtime`,`archives`.`deletetime`,`archives`.`memo`,`archives`.`status`,channel.id AS channel__id,channel.type AS channel__type,channel.model_id AS channel__model_id,channel.parent_id AS channel__parent_id,channel.name AS channel__name,channel.image AS channel__image,channel.flag AS channel__flag,channel.keywords AS channel__keywords,channel.description AS channel__description,channel.diyname AS channel__diyname,channel.outlink AS channel__outlink,channel.items AS channel__items,channel.weigh AS channel__weigh,channel.channeltpl AS channel__channeltpl,channel.listtpl AS channel__listtpl,channel.showtpl AS channel__showtpl,channel.pagesize AS channel__pagesize,channel.iscontribute AS channel__iscontribute,channel.isnav AS channel__isnav,channel.createtime AS channel__createtime,channel.updatetime AS channel__updatetime,channel.status AS channel__status FROM `gj_cms_archives` `archives` LEFT JOIN `gj_cms_channel` `channel` ON `archives`.`channel_id`=`channel`.`id` WHERE `archives`.`deletetime` IS NULL ORDER BY `archives`.`weigh` DESC,`archives`.`id` DESC LIMIT 0,10 [ RunTime:0.002032s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:36:47+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/cms/channel?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010148s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.024560s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001317s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.026413s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003368s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_cms_channel` [ RunTime:0.026585s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_cms_channel` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001391s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_cms_model` [ RunTime:0.026000s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_cms_model` ORDER BY `id` ASC [ RunTime:0.000947s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gj_auth_rule` WHERE  `name` = 'cms/channel' LIMIT 1 [ RunTime:0.000928s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:36:49+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/cms/channel/index?sort=weigh&order=desc&_=1557067007896
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008835s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023243s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001241s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.025711s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003706s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_cms_channel` [ RunTime:0.022992s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_cms_channel` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001311s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_cms_model` [ RunTime:0.023183s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_cms_model` ORDER BY `id` ASC [ RunTime:0.000941s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:36:52+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/cms/modelx?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.060104s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.021496s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001171s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.024133s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002987s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gj_auth_rule` WHERE  `name` = 'cms/modelx' LIMIT 1 [ RunTime:0.000919s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:36:55+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/cms/modelx/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1557067013470
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005284s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023160s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001269s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.021088s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003097s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_cms_model` [ RunTime:0.020081s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gj_cms_model` ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000706s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_cms_model` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000783s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:37:06+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/addon?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006201s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023270s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001219s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.026692s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003998s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gj_auth_rule` WHERE  `name` = 'addon' LIMIT 1 [ RunTime:0.001269s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:37:18+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/addon/downloaded?callback=jQuery22403790046324340881_1557067026572&sort=id&order=desc&filter=%7B%22type%22%3A%22local%22%2C%22faversion%22%3A%221.0.0.20190418_beta%22%7D&op=%7B%22type%22%3A%22%3D%22%2C%22faversion%22%3A%22%3D%22%7D&_=1557067026575
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008243s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023640s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001078s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.025597s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003294s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:37:24+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/addon/config?name=cms&dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005142s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023219s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001094s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.023612s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003313s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:38:02+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005348s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.020560s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001133s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.019704s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002638s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.022349s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"third\",\"force\":\"0\",\"uid\":\"0\",\"token\":\"\",\"version\":\"1.0.6\",\"faversion\":\"1.0.0.20190418_beta\"}' , '/admin/addon/install' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557067081) [ RunTime:0.046531s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:38:04+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005423s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023974s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001020s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.023153s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003487s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.021606s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/admin/index/index' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557067083) [ RunTime:0.056832s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:38:17+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005758s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.021186s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001372s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.022800s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003205s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.026116s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"cropper\",\"force\":\"0\",\"uid\":\"0\",\"token\":\"\",\"version\":\"1.0.1\",\"faversion\":\"1.0.0.20190418_beta\"}' , '/admin/addon/install' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557067097) [ RunTime:0.051369s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:38:18+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006040s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023882s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001046s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.022919s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003582s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.024734s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/admin/index/index' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557067098) [ RunTime:0.065865s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:38:34+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005800s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.022332s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001064s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.021410s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002939s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.023899s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"faems\",\"force\":\"0\",\"uid\":\"0\",\"token\":\"\",\"version\":\"1.0.0\",\"faversion\":\"1.0.0.20190418_beta\"}' , '/admin/addon/install' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557067114) [ RunTime:0.046221s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:38:36+08:00 ] 127.0.0.1 POST www.cmsguangjian.com/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033101s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023959s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001157s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.021953s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003043s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.021441s ]
+[ sql ] [ SQL ] INSERT INTO `gj_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/admin/index/index' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36' , '127.0.0.1' , 1557067116) [ RunTime:0.056699s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:39:43+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/general/config?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.179558s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.022358s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001176s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.022203s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003136s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_config` [ RunTime:0.021199s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_config` [ RunTime:0.001160s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gj_auth_rule` WHERE  `name` = 'general/config' LIMIT 1 [ RunTime:0.000861s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:39:48+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/general/profile?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005864s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.020636s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001075s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.020301s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003302s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:39:50+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/general/profile/index?sort=id&order=desc&offset=0&limit=10&_=1557067189461
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008545s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023917s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001104s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.024761s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.004932s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_admin_log` [ RunTime:0.024803s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gj_admin_log` WHERE  `admin_id` = 1 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000999s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_admin_log` WHERE  `admin_id` = 1 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001093s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:39:52+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/general/database?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005747s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.022231s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000958s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.022039s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003330s ]
+[ sql ] [ SQL ] SHOW TABLES [ RunTime:0.002423s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gj_auth_rule` WHERE  `name` = 'general/database' LIMIT 1 [ RunTime:0.000974s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:40:02+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/general/logs?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007562s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023255s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001075s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.038706s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003204s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:40:04+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/general/logs/index?file_paths=\201905\05.log&sort=id&order=desc&filter=%7B%7D&op=%7B%7D&_=1557067202550
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005259s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.022787s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001031s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.020808s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002986s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:40:12+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/category?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006325s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.024276s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001092s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.025124s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003734s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_category` [ RunTime:0.022861s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001290s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gj_auth_rule` WHERE  `name` = 'category' LIMIT 1 [ RunTime:0.000942s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:40:14+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/category/index?sort=weigh&order=desc&_=1557067213225
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006066s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.022592s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001040s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.023840s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003209s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_category` [ RunTime:0.021374s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001219s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:40:27+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/cms/diyform?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005766s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.020829s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001027s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.019972s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003234s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gj_auth_rule` WHERE  `name` = 'cms/diyform' LIMIT 1 [ RunTime:0.000910s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:40:29+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/cms/diyform/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1557067227542
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005887s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.023424s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001067s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.023752s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003058s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_cms_diyform` [ RunTime:0.021133s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gj_cms_diyform` ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000837s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_cms_diyform` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000924s ]
+---------------------------------------------------------------
+[ 2019-05-05T22:40:40+08:00 ] 127.0.0.1 GET www.cmsguangjian.com/admin/cms/archives/index?sort=weigh+DESC%2Cid+DESC&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1557067002457
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008522s ] mysql:host=127.0.0.1;dbname=cms_guangjian;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_group_access` [ RunTime:0.022821s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gj_auth_group_access` `aga` LEFT JOIN `gj_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001028s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_auth_rule` [ RunTime:0.031970s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gj_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003438s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_cms_channel` [ RunTime:0.021663s ]
+[ sql ] [ SQL ] SELECT * FROM `gj_cms_channel` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001143s ]
+[ sql ] [ SQL ] SELECT `id` FROM `gj_cms_channel` [ RunTime:0.000751s ]
+[ sql ] [ SQL ] SELECT `parent_id` FROM `gj_cms_channel` WHERE  `id` IN ('') [ RunTime:0.000642s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gj_cms_archives` [ RunTime:0.020898s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gj_cms_archives` `archives` LEFT JOIN `gj_cms_channel` `channel` ON `archives`.`channel_id`=`channel`.`id` WHERE `archives`.`deletetime` IS NULL ORDER BY `archives`.`weigh` DESC,`archives`.`id` DESC LIMIT 1 [ RunTime:0.000847s ]
+[ sql ] [ SQL ] SELECT `archives`.`id`,`archives`.`user_id`,`archives`.`channel_id`,`archives`.`model_id`,`archives`.`title`,`archives`.`style`,`archives`.`flag`,`archives`.`image`,`archives`.`keywords`,`archives`.`description`,`archives`.`tags`,`archives`.`weigh`,`archives`.`views`,`archives`.`comments`,`archives`.`likes`,`archives`.`dislikes`,`archives`.`diyname`,`archives`.`createtime`,`archives`.`updatetime`,`archives`.`publishtime`,`archives`.`deletetime`,`archives`.`memo`,`archives`.`status`,channel.id AS channel__id,channel.type AS channel__type,channel.model_id AS channel__model_id,channel.parent_id AS channel__parent_id,channel.name AS channel__name,channel.image AS channel__image,channel.flag AS channel__flag,channel.keywords AS channel__keywords,channel.description AS channel__description,channel.diyname AS channel__diyname,channel.outlink AS channel__outlink,channel.items AS channel__items,channel.weigh AS channel__weigh,channel.channeltpl AS channel__channeltpl,channel.listtpl AS channel__listtpl,channel.showtpl AS channel__showtpl,channel.pagesize AS channel__pagesize,channel.iscontribute AS channel__iscontribute,channel.isnav AS channel__isnav,channel.createtime AS channel__createtime,channel.updatetime AS channel__updatetime,channel.status AS channel__status FROM `gj_cms_archives` `archives` LEFT JOIN `gj_cms_channel` `channel` ON `archives`.`channel_id`=`channel`.`id` WHERE `archives`.`deletetime` IS NULL ORDER BY `archives`.`weigh` DESC,`archives`.`id` DESC LIMIT 0,10 [ RunTime:0.001588s ]
